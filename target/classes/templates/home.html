@@ -1,0 +1,26 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8" />
+</head>
+<body>
+
+	<nav th:replace="~{base :: top}"></nav>
+
+	<header th:replace="~{base :: titulo('Restaurantes e suas feijucas')}"></header>
+
+	<div class="container">
+	
+		<div th:each="prato : ${pratos}" class="card mb-3">
+			
+			<div class="card-body">
+			<h2 th:text="${prato.restaurante.nome }" class="card-title"></h2>
+			<p th:text="${prato.descricao}" class="card-text"></p>
+			<p>Leia mais sobre <a th:href="@{/restaurante/} + ${prato.restaurante.slug}" class="card-link"><span th:text="${prato.restaurante.nome }"></span></a></p>
+			</div>
+		</div>
+	</div>
+
+
+	<footer th:replace="~{base :: footer}"></nav>
+</body>
+</html>
