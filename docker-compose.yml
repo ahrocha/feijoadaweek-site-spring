@@ -22,4 +22,6 @@ networks:
   Feijuca:
     ipam:
       driver: default
+      config:
+      - subnet: 172.30.0.0/24
 
