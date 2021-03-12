@@ -8,21 +8,8 @@ services:
       dockerfile: Dockerfile
     container_name: feijoadaweek
     hostname: feijoadaweek
-    networks:
-      Feijuca:
-        ipv4_address: 172.30.0.2
     environment:
       FEIJUCA_DATABASE_URL: ${FEIJUCA_DATABASE_URL}
       FEIJUCA_DATABASE_USERNAME: ${FEIJUCA_DATABASE_USERNAME}
       FEIJUCA_DATABASE_PASSWORD: ${FEIJUCA_DATABASE_PASSWORD}
-#    ports:
-#      - 8080:8080
-
-networks:
-  Feijuca:
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.30.0.0/24
-    external: true
 
