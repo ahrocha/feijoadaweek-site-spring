@@ -9,7 +9,7 @@ services:
     container_name: feijoadaweek
     hostname: feijoadaweek
     networks:
-      default:
+      Feijuca:
         ipv4_address: 172.30.0.2
     environment:
       FEIJUCA_DATABASE_URL: ${FEIJUCA_DATABASE_URL}
@@ -19,7 +19,7 @@ services:
 #      - 8080:8080
 
 networks:
-  default:
+  Feijuca:
     ipam:
       driver: default
 
