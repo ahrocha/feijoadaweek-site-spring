@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+
+  feijoadaweek:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: feijoadaweek
+    hostname: feijoadaweek
+    environment:
+      FEIJUCA_DATABASE_URL: ${FEIJUCA_DATABASE_URL}
+      FEIJUCA_DATABASE_USERNAME: ${FEIJUCA_DATABASE_USERNAME}
+      FEIJUCA_DATABASE_PASSWORD: ${FEIJUCA_DATABASE_PASSWORD}
+    ports:
+      - 8080:8080
+
