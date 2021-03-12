@@ -1,0 +1,23 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8" />
+</head>
+<body>
+
+	<div th:replace="~{base :: top}"></div>
+
+	<div th:replace="~{base :: titulo('feijoada')}"></div>
+
+	<div class="container">
+			<h1 th:text="${restaurante.nome}"></h1>
+			
+		<div th:each="prato : ${pratos}" class="card mb-3">
+			<h1 th:text="${prato.nome }"></h1>
+			<p th:text="${prato.descricao}"></p>
+			<hr />
+		</div>
+			
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head th:replace="~{base :: head}">
+
+</head>
+<body>
+
+<div th:replace="~{base :: top}"></div>
+
+<div th:replace="~{base :: titulo('Olá, Mundo! Restaurantes e suas feijucas')}"></div>
+
+<div th:each="prato : ${pratos}">
+	<h1 th:text="${prato.restaurante.nome }"></h1>
+	<p th:text="${prato.descricao}"></p>
+	<hr />
+</div>
+
+</body>
+</html>
