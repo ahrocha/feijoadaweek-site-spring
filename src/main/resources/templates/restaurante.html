@@ -6,15 +6,18 @@
 
 	<div th:replace="~{base :: top}"></div>
 
-	<div th:replace="~{base :: titulo('feijoada')}"></div>
+	<div th:replace="~{base :: titulo(${restaurante.nome})}"></div>
 
 	<div class="container">
 			<h1 th:text="${restaurante.nome}"></h1>
 			
 		<div th:each="prato : ${pratos}" class="card mb-3">
-			<h1 th:text="${prato.nome }"></h1>
-			<p th:text="${prato.descricao}"></p>
-			<hr />
+		<div class="card-body">
+			<p class="card-subtitle mb-2 text-muted" th:text="${'Data: ' + #temporals.format(prato.data, 'dd/MM/yyyy')}"></p>
+			<p class="card-text" th:text="${prato.descricao}"></p>
+			</div>
+			
+			<p class="card-text" th:utext="${prato.foto}"></p>
 		</div>
 			
 	</div>
