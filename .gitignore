@@ -209,3 +209,4 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/git,java,maven,eclipse,windows
 /target/
+target/classes/META-INF/maven/br.com.feijoadaweek.mvc/feijuca/pom.properties

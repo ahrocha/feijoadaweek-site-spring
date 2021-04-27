@@ -14,3 +14,7 @@ services:
       FEIJUCA_DATABASE_PASSWORD: ${FEIJUCA_DATABASE_PASSWORD}
       expose: 8080
     restart: unless-stopped
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5c6899ca795ddb3ac249f4e8a8df3f5165686f4f
