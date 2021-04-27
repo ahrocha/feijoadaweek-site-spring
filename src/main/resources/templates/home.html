@@ -14,7 +14,7 @@
 			
 			<div class="card-body">
 			<h2 th:text="${prato.restaurante.nome }" class="card-title"></h2>
-			<p th:text="${prato.descricao}" class="card-text"></p>
+			<p class="card-text"><div th:remove="tag" th:utext="${prato.descricao}"></div></p>
 			<p>Leia mais sobre <a th:href="@{/restaurante/} + ${prato.restaurante.slug}" class="card-link"><span th:text="${prato.restaurante.nome }"></span></a></p>
 			</div>
 		</div>
