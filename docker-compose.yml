@@ -8,9 +8,8 @@ services:
       dockerfile: Dockerfile
     container_name: feijoadaweek
     hostname: feijoadaweek
+    env_file:
+      - .env
     environment:
-      FEIJUCA_DATABASE_URL: ${FEIJUCA_DATABASE_URL}
-      FEIJUCA_DATABASE_USERNAME: ${FEIJUCA_DATABASE_USERNAME}
-      FEIJUCA_DATABASE_PASSWORD: ${FEIJUCA_DATABASE_PASSWORD}
       expose: 8080
     restart: unless-stopped
