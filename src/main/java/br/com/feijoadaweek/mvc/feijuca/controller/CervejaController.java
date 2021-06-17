@@ -23,7 +23,7 @@ import br.com.feijoadaweek.mvc.feijuca.repository.RestauranteRepository;
 @RequestMapping("cervejas")
 public class CervejaController {
 
-	@GetMapping("/")
+	@GetMapping(value={"","/"})
 	public String index(Model model) {
 		return "cervejas";
 	}
