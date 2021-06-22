@@ -20,7 +20,8 @@
 			
 			<div class="card-body">
 			<h2 th:text="${cerveja.nome }" class="card-title"></h2>
-			<p class="card-text"><div th:remove="tag" th:utext="${cerveja.descricao}"></div></p>
+			<p>Leia mais sobre <a th:href="@{/cervejas/} + ${cerveja.slug}" class="card-link"><span th:text="${cerveja.nome }"></span></a></p>
+			<hr />
 			</div>
 		</div>
 	</div>

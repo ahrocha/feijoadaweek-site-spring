@@ -12,7 +12,7 @@ import br.com.feijoadaweek.mvc.feijuca.model.Tipo;
 @Repository
 public interface CervejaRepository extends JpaRepository<Cerveja, Integer>{
 
-//	public List<Cerveja> findTop10ByOrderByNomeDesc();
+	public List<Cerveja> findBySlug(String slug);
 
 	public List<Cerveja> findByMarca(Marca marca);
 

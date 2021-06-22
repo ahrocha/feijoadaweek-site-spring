@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.feijoadaweek.mvc.feijuca.dto.RequisicaoNovoRestaurante;
 import br.com.feijoadaweek.mvc.feijuca.model.Cerveja;
+import br.com.feijoadaweek.mvc.feijuca.model.Prato;
+import br.com.feijoadaweek.mvc.feijuca.model.Restaurante;
 import br.com.feijoadaweek.mvc.feijuca.repository.CervejaRepository;
 
 @Controller
@@ -31,5 +34,16 @@ public class CervejaController {
 		model.addAttribute("cervejas", cervejas);
 
 		return "cervejas";
+	}
+
+	@GetMapping("/{slug}")
+	public String findBySlug(@PathVariable("slug") String slug, Model model) {
+
+		List<Cerveja> cervejas = cervejaRepository.findBySlug(slug);
+		Cerveja cerveja = cervejas.get(0);
+
+		model.addAttribute("cerveja", cerveja);
+
+		return "cerveja";
 	}
 }
