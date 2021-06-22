@@ -13,18 +13,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.feijoadaweek.mvc.feijuca.dto.RequisicaoNovoRestaurante;
-import br.com.feijoadaweek.mvc.feijuca.model.Prato;
-import br.com.feijoadaweek.mvc.feijuca.model.Restaurante;
-import br.com.feijoadaweek.mvc.feijuca.repository.PratoRepository;
-import br.com.feijoadaweek.mvc.feijuca.repository.RestauranteRepository;
+import br.com.feijoadaweek.mvc.feijuca.model.Cerveja;
+import br.com.feijoadaweek.mvc.feijuca.repository.CervejaRepository;
 
 @Controller
 @RequestMapping("cervejas")
 public class CervejaController {
 
+	@Autowired
+	private CervejaRepository cervejaRepository;
+
 	@GetMapping(value={"","/"})
 	public String index(Model model) {
+
+		List<Cerveja> cervejas = cervejaRepository.findAll();
+		
+		model.addAttribute("cervejas", cervejas);
+
 		return "cervejas";
 	}
 }
