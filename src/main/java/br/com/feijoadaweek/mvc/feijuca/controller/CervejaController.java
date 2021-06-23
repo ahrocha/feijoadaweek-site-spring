@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.feijoadaweek.mvc.feijuca.dto.RequisicaoNovoRestaurante;
 import br.com.feijoadaweek.mvc.feijuca.model.Cerveja;
+import br.com.feijoadaweek.mvc.feijuca.model.Foto;
 import br.com.feijoadaweek.mvc.feijuca.model.Prato;
 import br.com.feijoadaweek.mvc.feijuca.model.Restaurante;
 import br.com.feijoadaweek.mvc.feijuca.repository.CervejaRepository;

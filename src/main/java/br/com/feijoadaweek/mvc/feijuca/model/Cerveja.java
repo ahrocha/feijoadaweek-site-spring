@@ -38,6 +38,17 @@ public class Cerveja {
 		this.foto = foto;
 	}
 
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cerveja")
+	private List<Foto> fotos;
+	
+	public List<Foto> getFotos() {
+		return fotos;
+	}
+
+	public void setFotos(List<Foto> fotos) {
+		this.fotos = fotos;
+	}
+
 	@ManyToOne
 	@JoinColumn(name="marca", nullable=false)
 	private Marca marca;

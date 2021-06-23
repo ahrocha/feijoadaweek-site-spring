@@ -23,12 +23,12 @@
 				<div class="card">
 					<img th:src="${cerveja.foto}" class="card-img-top" />
 					<div class="card-body">
-						<h2 th:text="${cerveja.nome }" class="card-title"></h2>
 						<p class="card-text">
 							<a th:href="@{/cerveja/} + ${cerveja.slug}" class="btn btn-primary">Leia
 								mais sobre <span th:text="${cerveja.nome }" style="display: none;" ></span>
 							</a>
 						</p>
+						<h4 th:text="${cerveja.nome }" class="card-title"></h4>
 					</div>
 				</div>
 			</div>

@@ -49,12 +49,6 @@ public class RestauranteController {
 
 		model.addAttribute("restaurante", restaurante);
 		model.addAttribute("pratos", pratos);
-
-		for(Prato prato:pratos) {
-			for(Foto foto:prato.getFotos()) {
-				System.out.println(foto.getUrl());
-			}
-		}
 		
 		return "restaurante";
 	}

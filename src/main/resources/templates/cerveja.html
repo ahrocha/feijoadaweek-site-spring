@@ -12,17 +12,26 @@
 		<h1 th:text="${cerveja.nome}"></h1>
 
 		<div class="row">
-			<div class="col-12 col-md-8">
-				<p><div th:remove="tag" th:utext="${cerveja.descricao}"></p>
+			<div class="col-12 col-md-9">
+				<p th:remove="tag"
+					th:utext="${#strings.replace(cerveja.descricao,'&#10;','<br />')}">
+				</p>
 			</div>
-			<div class="col-12 col-md-4">
-				<img th:src="${cerveja.foto}" class="d-block w-100" />
+			<div class="col-12 col-md-3">
+				<img th:src="${cerveja.foto}" class="w-100" />
 			</div>
+		</div>
+		<h3>Fotos</h3>
+		<div class="row">
+			<th:block th:each="foto : ${cerveja.fotos}">
+				<div class="col-12 col-md-3 mt-2">
+					<img th:src="${foto.url}" class="d-block w-100" />
+				</div>
+			</th:block>
 		</div>
 
 	</div>
 
 	<footer th:replace="~{base :: footer}"></footer>
-
 </body>
 </html>
