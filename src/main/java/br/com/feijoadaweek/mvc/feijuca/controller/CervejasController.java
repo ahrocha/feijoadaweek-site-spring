@@ -20,20 +20,19 @@ import br.com.feijoadaweek.mvc.feijuca.model.Restaurante;
 import br.com.feijoadaweek.mvc.feijuca.repository.CervejaRepository;
 
 @Controller
-@RequestMapping("cerveja")
-public class CervejaController {
+@RequestMapping("cervejas")
+public class CervejasController {
 
 	@Autowired
 	private CervejaRepository cervejaRepository;
 
-	@GetMapping("/{slug}")
-	public String findBySlug(@PathVariable("slug") String slug, Model model) {
+	@GetMapping(value={"","/"})
+	public String index(Model model) {
 
-		List<Cerveja> cervejas = cervejaRepository.findBySlug(slug);
-		Cerveja cerveja = cervejas.get(0);
+		List<Cerveja> cervejas = cervejaRepository.findAll();
+		
+		model.addAttribute("cervejas", cervejas);
 
-		model.addAttribute("cerveja", cerveja);
-
-		return "cerveja";
+		return "cervejas";
 	}
 }
