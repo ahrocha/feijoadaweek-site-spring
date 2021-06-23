@@ -9,17 +9,28 @@
 	<div th:replace="~{base :: titulo('Feijoada e Cerveja')}"></div>
 
 	<div class="container">
-			<h1>Cervejas</h1>
-			<p>Além da caipirinha, também é muito bom uma cerveja para acompanhar a feijoada.</p>
+		<h1>Cervejas</h1>
+		<p>Além da caipirinha, também é muito bom uma cerveja para
+			acompanhar a feijoada.</p>
 	</div>
-	
+
 	<div class="container">
-	
-		<div th:each="cerveja : ${cervejas}" class="card mb-3">
-			
-			<div class="card-body">
-			<h2 th:text="${cerveja.nome }" class="card-title"></h2>
-			<p>Leia mais sobre <a th:href="@{/cervejas/} + ${cerveja.slug}" class="card-link"><span th:text="${cerveja.nome }"></span></a></p>
+
+		<div class="row">
+
+			<div th:each="cerveja : ${cervejas}" class="col-md-2">
+
+				<div class="card">
+					<img th:src="${cerveja.foto}" class="card-img-top" />
+					<div class="card-body">
+						<h2 th:text="${cerveja.nome }" class="card-title"></h2>
+						<p class="card-text">
+							<a th:href="@{/cerveja/} + ${cerveja.slug}" class="btn btn-primary">Leia
+								mais sobre <span th:text="${cerveja.nome }" style="display: none;" ></span>
+							</a>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

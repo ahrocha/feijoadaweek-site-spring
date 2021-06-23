@@ -11,12 +11,13 @@
 	<div class="container">
 		<h1 th:text="${cerveja.nome}"></h1>
 
-		<div class="card mb-3">
-			<div class="card-body">
-				
-				<p class="card-text"><div th:remove="tag" th:utext="${cerveja.descricao}"></div></p>
+		<div class="row">
+			<div class="col-12 col-md-8">
+				<p><div th:remove="tag" th:utext="${cerveja.descricao}"></p>
 			</div>
-
+			<div class="col-12 col-md-4">
+				<img th:src="${cerveja.foto}" class="d-block w-100" />
+			</div>
 		</div>
 
 	</div>
