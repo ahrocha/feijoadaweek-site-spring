@@ -55,7 +55,7 @@ System.out.println("DEBUG");
 		for(Foto foto : pratos.get(0).getFotos() ) {
 			System.out.println(foto.getUrl());
 			System.out.println("Prato " + foto.getPrato().getId());
-			System.out.println("Restaurante " + foto.getRestaurante().getId();			
+			System.out.println("Restaurante " + foto.getRestaurante().getId());			
 		}
 //		System.out.println(pratos.get(0).getFotos().get(0).getUrl());
 		return "restaurante";
