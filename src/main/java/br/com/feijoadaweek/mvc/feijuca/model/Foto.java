@@ -54,14 +54,6 @@ public class Foto {
 		this.id = id;
 	}
 
-//	public Prato getPrato() {
-//		return prato;
-//	}
-//
-//	public void setPrato(Prato prato) {
-//		this.prato = prato;
-//	}
-
 	public String getNome() {
 		return nome;
 	}
@@ -94,11 +86,11 @@ public class Foto {
 		this.data = data;
 	}
 
-	public Prato getRestaurante() {
+	public Restaurante getRestaurante() {
 		return restaurante;
 	}
 
-	public void setRestaurante(Prato restaurante) {
+	public void setRestaurante(Restaurante restaurante) {
 		this.restaurante = restaurante;
 	}
 
@@ -110,19 +102,19 @@ public class Foto {
 		this.prato = prato;
 	}
 
-	public Prato getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(Prato marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 
-	public Prato getCerveja() {
+	public Cerveja getCerveja() {
 		return cerveja;
 	}
 
-	public void setCerveja(Prato cerveja) {
+	public void setCerveja(Cerveja cerveja) {
 		this.cerveja = cerveja;
 	}
 
