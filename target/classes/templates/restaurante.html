@@ -9,17 +9,31 @@
 	<div th:replace="~{base :: titulo(${restaurante.nome})}"></div>
 
 	<div class="container">
-		<h1 th:text="${restaurante.nome}"></h1>
 
 		<div th:each="prato : ${pratos}" class="card mb-3">
 			<div class="card-body">
-				<p class="card-subtitle mb-2 text-muted"
-					th:text="${'Data: ' + #temporals.format(prato.data, 'dd/MM/yyyy')}"></p>
-				
-				<p class="card-text"><div th:remove="tag" th:utext="${prato.descricao}"></div></p>
-			</div>
-			<div>
-				<img class="img-thumbnail" th:src="${prato.foto}" src="" />
+
+				<div class="row">
+
+					<div class="col-12 col-md-4">
+
+						<p class="card-subtitle mb-2 text-muted"
+							th:text="${'Data: ' + #temporals.format(prato.data, 'dd/MM/yyyy')}"></p>
+
+						<p class="card-text">
+						<div th:remove="tag"
+							th:utext="${#strings.replace(prato.descricao,'&#10;','<br />')}"></div>
+						</p>
+					</div>
+
+					<th:block th:each="foto : ${prato.fotos}">
+						<div class="col-12 col-md-4 mt-2">
+							<img th:src="${foto.url}" class="d-block w-100" />
+						</div>
+					</th:block>
+
+				</div>
+
 			</div>
 
 		</div>
@@ -27,6 +41,8 @@
 	</div>
 
 	<footer th:replace="~{base :: footer}"></footer>
-
+	<script>
+		jQuery('.carousel-item:first').addClass('active');
+	</script>
 </body>
 </html>
