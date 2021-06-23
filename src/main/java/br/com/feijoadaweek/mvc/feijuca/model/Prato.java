@@ -46,7 +46,17 @@ public class Prato {
 	private Double nota;
 
 	private String foto;
+
+	private String chamada;
 	
+	public String getChamada() {
+		return chamada;
+	}
+
+	public void setChamada(String chamada) {
+		this.chamada = chamada;
+	}
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "prato")
 	private List<Foto> fotos;
 
@@ -138,6 +148,11 @@ public class Prato {
 		this.foto = foto;
 	}
 	
-	
+	public String getResumo() {
+		if (chamada == null) {
+			return descricao.substring(0, descricao.indexOf('.') + 1);
+		}
+		return chamada;
+	}
 
 }

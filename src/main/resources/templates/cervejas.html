@@ -6,14 +6,13 @@
 
 	<div th:replace="~{base :: top}"></div>
 
-	<div th:replace="~{base :: titulo('Feijoada acompanha cerveja')}"></div>
+	<div th:replace="~{base :: titulo('Feijoada e Cerveja')}"></div>
 
 	<div class="container">
-		<div class="card mb-3">
 			<h1>Cervejas</h1>
-			<p>Em breve, as cervejas devidamente acompanhadas de feijoadas.</p>
-			<hr />
-		</div>
+			<p>Além da caipirinha, também é muito bom uma cerveja para acompanhar a feijoada.</p>
+	</div>
+	
 	<div class="container">
 	
 		<div th:each="cerveja : ${cervejas}" class="card mb-3">
@@ -21,11 +20,11 @@
 			<div class="card-body">
 			<h2 th:text="${cerveja.nome }" class="card-title"></h2>
 			<p>Leia mais sobre <a th:href="@{/cervejas/} + ${cerveja.slug}" class="card-link"><span th:text="${cerveja.nome }"></span></a></p>
-			<hr />
 			</div>
 		</div>
 	</div>
-	</div>
+
+	<footer th:replace="~{base :: footer}"></footer>
 
 </body>
 </html>

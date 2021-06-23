@@ -2,25 +2,33 @@
 <head th:replace="~{base :: head}">
 <meta charset="UTF-8" />
 </head>
-<body>
+<body id="home">
 
 	<nav th:replace="~{base :: top}"></nav>
 
-	<header th:replace="~{base :: titulo('Restaurantes e suas feijucas')}"></header>
+	<header th:replace="~{base :: titulo('Que tal feijoada hoje')}"></header>
 
 	<div class="container">
 	
 		<div th:each="prato : ${pratos}" class="card mb-3">
-			
 			<div class="card-body">
+<div class="row">
+<th:block th:if= "${prato.foto != null}">			
+			<div class="col-12 col-md-4">
+				<img th:src="${prato.foto}" class="img-thumbnail" />			
+			</div>
+</th:block>
+			<div th:if= "${prato.foto != ''}" class="col-12 col-md-8">
 			<h2 th:text="${prato.restaurante.nome }" class="card-title"></h2>
-			<p class="card-text"><div th:remove="tag" th:utext="${prato.descricao}"></div></p>
-			<p>Leia mais sobre <a th:href="@{/restaurante/} + ${prato.restaurante.slug}" class="card-link"><span th:text="${prato.restaurante.nome }"></span></a></p>
+			<p class="card-text"><div th:remove="tag" th:utext="${prato.resumo}"></div></p>
+			<p><a th:href="@{/restaurante/} + ${prato.restaurante.slug}" class="btn btn-primary">
+				Leia mais <span th:text="${prato.restaurante.nome }" style="display: none"></span></a></p>
+</div>
+			</div>
 			</div>
 		</div>
 	</div>
 
-
-	<footer th:replace="~{base :: footer}"></nav>
+	<footer th:replace="~{base :: footer}"></footer>
 </body>
 </html>
