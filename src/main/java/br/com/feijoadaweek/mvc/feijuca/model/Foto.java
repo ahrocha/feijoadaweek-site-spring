@@ -23,7 +23,7 @@ public class Foto {
 	
 	@ManyToOne
 	@JoinColumn(name="restaurante_id", nullable=true)
-	private Prato restaurante;
+	private Restaurante restaurante;
 	
 	@ManyToOne
 	@JoinColumn(name="prato_id", nullable=true)
@@ -31,11 +31,11 @@ public class Foto {
 	
 	@ManyToOne
 	@JoinColumn(name="marca_id", nullable=true)
-	private Prato marca;
+	private Marca marca;
 	
 	@ManyToOne
 	@JoinColumn(name="cerveja_id", nullable=true)
-	private Prato cerveja;
+	private Cerveja cerveja;
 
 	private String nome;
 	
