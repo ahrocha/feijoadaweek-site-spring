@@ -21,7 +21,7 @@
 			<div th:each="cerveja : ${cervejas}" class="col-md-2">
 
 				<div class="card">
-					<img th:src="${cerveja.foto}" class="card-img-top" />
+					<img th:src="${cerveja.foto}" class="card-img-top" th:alt="${cerveja.nome}" />
 					<div class="card-body">
 						<p class="card-text">
 							<a th:href="@{/cerveja/} + ${cerveja.slug}" class="btn btn-primary">Leia

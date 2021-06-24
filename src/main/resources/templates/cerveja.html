@@ -22,7 +22,7 @@
 		<div class="row">
 			<th:block th:each="foto : ${cerveja.fotos}">
 				<div class="col-12 col-md-3 mt-2">
-					<img th:src="${foto.url}" class="d-block w-100" alt="${foto.descricao}" />
+					<img th:src="${foto.url}" class="d-block w-100" th:alt="${foto.descricao}" />
 				</div>
 			</th:block>
 		</div>
