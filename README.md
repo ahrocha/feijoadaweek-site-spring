@@ -7,7 +7,7 @@ Enquanto que a feijoada é, constumeiramente, consumida as quartas-feiras e sáb
 
 A aplicação de gerenciamento do conteúdo encontra-se no repositório https://github.com/ahrocha/feijoadaweek-admin-spring
 
-##Terramentas e Tecnologias usadas##
+## Terramentas e Tecnologias usadas
 
 * Java, HTTML, CSS e JavaScript.
 * Springboot, Thymeleaf.
@@ -19,7 +19,7 @@ A aplicação de gerenciamento do conteúdo encontra-se no repositório https://
 * Let's Encrypt
 
 
-##Roadmap##
+## Roadmap
 
 Não estão necessariamente em ordem:
 
