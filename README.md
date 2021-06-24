@@ -5,7 +5,7 @@ Frontend e backend Feijoadaweek usando Spring + thymeleaf.
 O objetivo do blog https://www.feijoadaweek.com.br/ é unir a prática de programação e o apreço pela feijoada.
 Enquanto que a feijoada é, constumeiramente, consumida as quartas-feiras e sábados, a programação e codificação são utilizados quase que diariamente.
 
-A aplicação de gerenciamento do conteúdo encontra-se no repositório (https://github.com/ahrocha/feijoadaweek-admin-spring) [https://github.com/ahrocha/feijoadaweek-admin-spring]
+A aplicação de gerenciamento do conteúdo encontra-se no repositório https://github.com/ahrocha/feijoadaweek-admin-spring
 
 ##Terramentas e Tecnologias usadas##
 
@@ -18,7 +18,6 @@ A aplicação de gerenciamento do conteúdo encontra-se no repositório (https:/
 * Jenkins, Nginx, FPM.
 * Let's Encrypt
 
-https://github.com/ahrocha/feijoadaweek-admin-spring
 
 ##Roadmap##
 
