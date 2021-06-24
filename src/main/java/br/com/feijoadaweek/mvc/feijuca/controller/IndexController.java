@@ -31,6 +31,7 @@ public class IndexController {
 		List<Prato> pratos = pratoRepository.findTop10ByOrderByDataDesc();
 		
 		model.addAttribute("pratos", pratos);
+		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/");
 
 		return "home";
 	}

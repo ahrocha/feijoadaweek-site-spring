@@ -35,6 +35,7 @@ public class RestauranteController {
 		List<Restaurante> restaurantes = restauranteRepository.findAll();
 	
 		model.addAttribute("restaurantes", restaurantes);
+		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/");
 
 		return "restaurantes";
 	}
@@ -49,15 +50,9 @@ public class RestauranteController {
 
 		model.addAttribute("restaurante", restaurante);
 		model.addAttribute("pratos", pratos);
-System.out.println("DEBUG");
-		System.out.println(pratos.get(0).getId());
-		
-		for(Foto foto : pratos.get(0).getFotos() ) {
-			System.out.println(foto.getUrl());
-			System.out.println("Prato " + foto.getPrato().getId());
-			System.out.println("Restaurante " + foto.getRestaurante().getId());			
-		}
-//		System.out.println(pratos.get(0).getFotos().get(0).getUrl());
+
+		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/restaurante/" + slug);
+
 		return "restaurante";
 	}
 }

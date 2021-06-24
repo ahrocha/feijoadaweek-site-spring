@@ -14,14 +14,17 @@
 
 	gtag('config', 'UA-1285816-30');
 </script>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description"
-	content="análises, unboxings, fotos e reviews de feijoadas.">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="análises, unboxings, fotos e reviews de feijoadas.">
 <meta name="keywords" content="feijoada, feijuca, feijoadas, feijucas, análises de feijoadas">
 <meta name="author" content="Andrey">
 <meta name="google-signin-client_id"
 	content="503498303053-qrbagad4pb9ehr96c39mp3kb7dlf9nv3.apps.googleusercontent.com">
+	
+<th:block th:if="${canonical != null}">
+	<link rel="canonical" th:href="${canonical}" />
+</th:block>
+	
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <!-- CSS only -->
 <link

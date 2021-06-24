@@ -34,6 +34,7 @@ public class CervejaController {
 		Cerveja cerveja = cervejas.get(0);
 
 		model.addAttribute("cerveja", cerveja);
+		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/cerveja/" + slug);
 
 		return "cerveja";
 	}
