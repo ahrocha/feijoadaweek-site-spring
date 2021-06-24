@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.feijoadaweek.mvc.feijuca.dto.RequisicaoNovoRestaurante;
 import br.com.feijoadaweek.mvc.feijuca.model.Cerveja;
 import br.com.feijoadaweek.mvc.feijuca.model.Prato;
 import br.com.feijoadaweek.mvc.feijuca.model.Restaurante;

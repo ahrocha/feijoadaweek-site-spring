@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import br.com.feijoadaweek.mvc.feijuca.dto.RequisicaoNovoRestaurante;
 import br.com.feijoadaweek.mvc.feijuca.model.Prato;
 import br.com.feijoadaweek.mvc.feijuca.model.Restaurante;
 import br.com.feijoadaweek.mvc.feijuca.repository.PratoRepository;
