@@ -31,7 +31,7 @@ public class CervejasController {
 		List<Cerveja> cervejas = cervejaRepository.findAll();
 		
 		model.addAttribute("cervejas", cervejas);
-		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/cervejas");
+		model.addAttribute("canonical", "https://www.feijoadaweek.com.br/cervejas");
 
 		return "cervejas";
 	}

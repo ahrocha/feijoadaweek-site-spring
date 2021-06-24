@@ -50,7 +50,7 @@ public class RestauranteController {
 		model.addAttribute("restaurante", restaurante);
 		model.addAttribute("pratos", pratos);
 
-		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/restaurante/" + slug);
+		model.addAttribute("canonical", "https://www.feijoadaweek.com.br/restaurante/" + slug);
 
 		return "restaurante";
 	}
