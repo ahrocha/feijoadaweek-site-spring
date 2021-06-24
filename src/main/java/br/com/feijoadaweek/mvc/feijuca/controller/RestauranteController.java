@@ -30,15 +30,15 @@ public class RestauranteController {
 	@Autowired
 	private PratoRepository pratoRepository;
 
-	@GetMapping("listar")
-	public String hello(Model model) {
-		List<Restaurante> restaurantes = restauranteRepository.findAll();
-	
-		model.addAttribute("restaurantes", restaurantes);
-		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/");
-
-		return "restaurantes";
-	}
+//	@GetMapping("listar")
+//	public String hello(Model model) {
+//		List<Restaurante> restaurantes = restauranteRepository.findAll();
+//	
+//		model.addAttribute("restaurantes", restaurantes);
+//		model.addAttribute("canonical", "http://www.feijoadaweek.com.br/");
+//
+//		return "restaurantes";
+//	}
 
 	@GetMapping("/{slug}")
 	public String findBySlug(@PathVariable("slug") String slug, RequisicaoNovoRestaurante requisicao, Model model) {
