@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8" />
+</head>
+<body>
+
+	<div th:replace="~{base :: top}"></div>
+
+	<div th:replace="~{base :: titulo('Feijoada e Cerveja')}"></div>
+
+	<div class="container">
+		<h1>Links</h1>
+	</div>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-2">
+				<p>
+					<a
+						href="https://abelaeobigode.com.br/feijoada-zona-norte-sao-paulo/">Feijoada
+						na Zona Norte de São Paulo</a>
+				</p>
+				<p>
+					<a href="https://abelaeobigode.com.br/o-tradicionalissimo/">Donuts
+						O Tradicionalíssimo Santa Cruz</a>
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<footer th:replace="~{base :: footer}"></footer>
+
+</body>
+</html>

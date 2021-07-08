@@ -25,7 +25,7 @@ public class IndexController {
 	private PratoRepository pratoRepository;
 
 	@RequestMapping("/")
-	public String hello(Model model) {
+	public String index(Model model) {
 
 		List<Prato> pratos = pratoRepository.findTop10ByOrderByDataDesc();
 		
@@ -33,5 +33,17 @@ public class IndexController {
 		model.addAttribute("canonical", "https://www.feijoadaweek.com.br/");
 
 		return "home";
+	}
+
+	@RequestMapping("/sobre")
+	public String sobre(Model model) {
+
+		return "sobre";
+	}
+
+	@RequestMapping("/links")
+	public String links(Model model) {
+
+		return "links";
 	}
 }
