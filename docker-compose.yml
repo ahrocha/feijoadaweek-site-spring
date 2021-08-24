@@ -13,3 +13,15 @@ services:
     environment:
       expose: 8080
     restart: unless-stopped
+
+  feijoadaweek-develop:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: feijoadaweek-develop
+    hostname: feijoadaweek-develop
+    env_file:
+      - .env
+    environment:
+      expose: 8080
+    restart: unless-stopped
