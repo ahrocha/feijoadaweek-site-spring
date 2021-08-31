@@ -6,26 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.feijoadaweek.mvc.feijuca.model.Cafe;
 import br.com.feijoadaweek.mvc.feijuca.repository.CafeRepository;
 
 @Controller
-@RequestMapping("cafes")
-public class CafesController {
+@RequestMapping("cafe")
+public class CafeController {
 
 	@Autowired
 	private CafeRepository cafeRepository;
 
-	@GetMapping(value={"","/"})
-	public String index(Model model) {
+	@GetMapping("/{slug}")
+	public String findBySlug(@PathVariable("slug") String slug, Model model) {
 
-		List<Cafe> cafes = cafeRepository.findAll();
+		List<Cafe> cafes = cafeRepository.findBySlug(slug);
+		Cafe cafe = cafes.get(0);
 
-		model.addAttribute("cafes", cafes);
-		model.addAttribute("canonical", "https://www.feijoadaweek.com.br/cafes");
+		model.addAttribute("cafe", cafe);
+		model.addAttribute("canonical", "https://www.feijoadaweek.com.br/cafe/" + slug);
 
-		return "cafes";
+		return "cafe";
 	}
 }

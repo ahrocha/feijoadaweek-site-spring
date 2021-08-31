@@ -16,9 +16,21 @@
 
 	<div class="container">
 
-		<div class="row">
-			<p>Em breve, relações de cafés bons e ruins. Ao menos, no nosso ponto de vista.</p>
-		</div>
+			<div th:each="cafe : ${cafes}" class="col-md-2">
+
+				<div class="card">
+					<img th:src="${cafe.foto}" class="card-img-top" th:alt="${cafe.nome}" />
+					<div class="card-body">
+						<p class="card-text">
+							<a th:href="@{/cafe/} + ${cafe.slug}" class="btn btn-primary">Leia
+								mais sobre <span th:text="${cafe.nome }" style="display: none;" ></span>
+							</a>
+						</p>
+						<h4 th:text="${cafe.nome }" class="card-title"></h4>
+					</div>
+				</div>
+			</div>
+			
 	</div>
 
 	<footer th:replace="~{base :: footer}"></footer>
