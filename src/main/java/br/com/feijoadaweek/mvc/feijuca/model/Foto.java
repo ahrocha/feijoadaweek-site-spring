@@ -36,6 +36,18 @@ public class Foto {
 	@ManyToOne
 	@JoinColumn(name="cerveja_id", nullable=true)
 	private Cerveja cerveja;
+	
+	@ManyToOne
+	@JoinColumn(name="cafe_id", nullable=true)
+	private Cafe cafe;
+
+	public Cafe getCafe() {
+		return cafe;
+	}
+
+	public void setCafe(Cafe cafe) {
+		this.cafe = cafe;
+	}
 
 	private String nome;
 	
@@ -117,7 +129,5 @@ public class Foto {
 	public void setCerveja(Cerveja cerveja) {
 		this.cerveja = cerveja;
 	}
-
-	
 	
 }
