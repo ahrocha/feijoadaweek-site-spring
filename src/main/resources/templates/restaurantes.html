@@ -10,6 +10,7 @@
 	<div th:replace="~{base :: titulo('Restaurantes e suas feijucas')}"></div>
 
 	<div class="container">
+		<h2>Últimas feijoadas</h2>
 		<div th:each="restaurante : ${restaurantes}" class="card mb-3">
 			<h1 th:text="${restaurante.nome }"></h1>
 			<a href="${restaurante.slug}"><p th:text="${restaurante.slug}"></p></a>
