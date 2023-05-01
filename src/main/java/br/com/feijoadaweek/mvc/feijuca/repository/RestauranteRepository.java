@@ -2,16 +2,16 @@ package br.com.feijoadaweek.mvc.feijuca.repository;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+//import javax.persistence.EntityManager;
+//import javax.persistence.EntityManagerFactory;
+//import javax.persistence.Persistence;
+//import javax.persistence.PersistenceContext;
+//import javax.persistence.Query;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.feijoadaweek.mvc.feijuca.model.Prato;
+//import br.com.feijoadaweek.mvc.feijuca.model.Prato;
 import br.com.feijoadaweek.mvc.feijuca.model.Restaurante;
 
 @Repository

@@ -1,6 +1,6 @@
 package br.com.feijoadaweek.mvc.feijuca;
 
-import static org.junit.jupiter.api.Assertions.fail;
+//import static org.junit.jupiter.api.Assertions.fail;
 //import static org.junit.jupiter.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 
