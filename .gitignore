@@ -211,3 +211,5 @@ $RECYCLE.BIN/
 /target/
 target/classes/META-INF/maven/br.com.feijoadaweek.mvc/feijuca/pom.properties
 .env
+
+!target/app.jar
