@@ -1,7 +1,5 @@
 package br.com.feijoadaweek.mvc.feijuca.model;
 
-//import java.time.LocalDateTime;
-//import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.Column;

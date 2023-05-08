@@ -1,7 +1,8 @@
 
 <head th:fragment="head">
 <meta charset="UTF-8">
-<title>Feijucas e Feijoadas do FeijoadaWeek</title>
+<title th:if="${title == null}">Feijucas e Feijoadas do FeijoadaWeek</title>
+<title th:if="${title != null}" th:text="${title}"></title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D378PCBDMF"></script>
 <script>
@@ -64,10 +65,10 @@ body:not(#home) .site-heading{
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="/">Feijoadas</a>
-				<li class="nav-item"><a class="nav-link" href="/cervejas">Cervejas</a>
-				<li class="nav-item"><a class="nav-link" href="/cafes">Cafés</a>
-				</li>
+				<li class="nav-item"><a class="nav-link" href="/">Feijoadas</a></li>
+				<li class="nav-item"><a class="nav-link" href="/cervejas">Cervejas</a></li>
+				<li class="nav-item"><a class="nav-link" href="/cafes">Cafés</a></li>
+				<li class="nav-item"><a class="nav-link" href="/outros">Outros pratos</a></li>
 			</ul>
 		</div>
 	</div>

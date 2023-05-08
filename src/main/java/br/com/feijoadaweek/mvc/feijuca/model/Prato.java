@@ -32,6 +32,9 @@ public class Prato {
 
 	private Integer status;
 
+	@Column(columnDefinition = "BOOLEAN")
+	private boolean feijoada;
+
 	@Column(columnDefinition = "TEXT")
 	private String descricao;
 
@@ -153,6 +156,14 @@ public class Prato {
 			return descricao.substring(0, descricao.indexOf('.') + 1);
 		}
 		return chamada;
+	}
+
+	public Boolean getFeijoada() {
+		return feijoada;
+	}
+
+	public void setFeijoada(Boolean feijoada) {
+		this.feijoada = feijoada;
 	}
 
 }

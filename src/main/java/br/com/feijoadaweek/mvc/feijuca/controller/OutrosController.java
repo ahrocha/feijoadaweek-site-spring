@@ -19,31 +19,19 @@ import br.com.feijoadaweek.mvc.feijuca.repository.PratoRepository;
 //import br.com.feijoadaweek.mvc.feijuca.repository.RestauranteRepository;
 
 @Controller
-public class IndexController {
+public class OutrosController {
 	
 	@Autowired
 	private PratoRepository pratoRepository;
 
-	@RequestMapping("/")
+	@RequestMapping("/outros")
 	public String index(Model model) {
 
-		List<Prato> pratos = pratoRepository.findTop10ByFeijoadaOrderByDataDesc(true);
+		List<Prato> pratos = pratoRepository.findTop10ByFeijoadaOrderByDataDesc(false);
 		
 		model.addAttribute("pratos", pratos);
 		model.addAttribute("canonical", "https://www.feijoadaweek.com.br/");
 
 		return "home";
-	}
-
-	@RequestMapping("/sobre")
-	public String sobre(Model model) {
-
-		return "sobre";
-	}
-
-	@RequestMapping("/links")
-	public String links(Model model) {
-
-		return "links";
 	}
 }
