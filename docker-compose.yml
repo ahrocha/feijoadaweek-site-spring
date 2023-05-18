@@ -13,6 +13,9 @@ services:
     environment:
       expose: 8080
     restart: unless-stopped
+    networks:
+      default:
+        ipv4_address: 172.28.0.10
 
   feijoadaweek-develop:
     build:
@@ -25,3 +28,14 @@ services:
     environment:
       expose: 8080
     restart: unless-stopped
+    networks:
+      default:
+        ipv4_address: 172.28.0.11
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/24

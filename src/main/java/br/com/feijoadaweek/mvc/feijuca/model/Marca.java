@@ -1,10 +1,5 @@
 package br.com.feijoadaweek.mvc.feijuca.model;
 
-//import java.io.Serializable;
-//
-//import java.time.LocalDateTime;
-//import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
